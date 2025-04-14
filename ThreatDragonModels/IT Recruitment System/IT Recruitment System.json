@@ -1,1 +1,2292 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "IT recruitment for a cybersecurity company",
+    "owner": "kamlovskayanadya",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 1,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [
+          {
+            "position": {
+              "x": 735,
+              "y": 125.00000000000108
+            },
+            "size": {
+              "width": 350,
+              "height": 330
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "3190641f-c552-4321-a2d6-226a05863536",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 184.99999999999955,
+              "y": 150.00000000000108
+            },
+            "size": {
+              "width": 220,
+              "height": 170
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "510dcd20-688c-4c97-aaa5-b167c890b0c4",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 92.5,
+              "y": -250
+            },
+            "size": {
+              "width": 120,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "Кандидат"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a8ad952a-e473-444c-9c7d-a7d534dd4006"
+                },
+                {
+                  "group": "right",
+                  "id": "87f049c8-7fb2-469d-b10f-b4233293926c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a5e0349c-4c1c-45b5-b45b-6eb2fa7d1f92"
+                },
+                {
+                  "group": "left",
+                  "id": "afb2200a-7ee1-44c1-852d-055820bdf917"
+                }
+              ]
+            },
+            "id": "0dd262b6-e568-4a30-acd8-e9d9d606ffb8",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Кандидат",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "eeba4488-176f-4646-ad06-b71ef6eeec41",
+                  "title": "Подделка личности при входе(Spoofing)",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Нарушитель может войти в систему, выдав себя за другого кандидата, при отсутствии надёжной аутентификации.  \nCWE-290: Authentication Bypass by Spoofing",
+                  "mitigation": "1. Внедрить многофакторную аутентификацию (MFA).  \n2. Применять токены с ограниченным сроком действия и валидацией.  \nOWASP ASVS 2.1.1, 3.1.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "1",
+                  "score": ""
+                },
+                {
+                  "id": "e0947d60-0e4a-4bcd-9ec9-247f05656808",
+                  "title": "Загрузка вредоносного файла(Tampering)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Кандидат может загрузить вредоносный файл (например, исполняемый скрипт) под видом резюме. Если отсутствует проверка типа или содержимого, это может привести к выполнению кода.  \nCWE-434: Unrestricted Upload of File with Dangerous Type",
+                  "mitigation": "1. Разрешить загрузку только PDF/DOCX с проверкой MIME-типа.  \n2. Проверять файлы антивирусом перед сохранением.  \nOWASP ASVS 13.2.1, 13.3.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "2",
+                  "score": ""
+                },
+                {
+                  "id": "de4dc0e1-6b28-4bfe-95ed-8afd85e31986",
+                  "title": "Утечка персональных данных(Information Disclosure)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Если резюме или контактные данные кандидата передаются по HTTP, возможно их перехватывание в публичной сети.  \nCWE-319: Cleartext Transmission of Sensitive Information",
+                  "mitigation": "1. Использовать защищённое соединение (HTTPS) для всех соединений.  \n2. Полный запрет доступа по HTTP.  \nOWASP ASVS 9.1.1, 9.1.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "3",
+                  "score": ""
+                },
+                {
+                  "id": "f4283c26-071e-48a5-be72-743db429f06a",
+                  "title": "Получение чужого резюме",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Кандидат может изменить значение параметра ID в URL (например, ?resume_id=123) и получить доступ к чужому резюме.  \nCWE-639: Authorization Bypass Through User-Controlled Key",
+                  "mitigation": "Проверяем права доступа пользователя на каждый запрос к защищённым данным на серверной стороне.  \nOWASP ASVS 4.2.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "4",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 5
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          },
+          {
+            "position": {
+              "x": 703.75,
+              "y": -245
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Рекрутер"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 2,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a8ad952a-e473-444c-9c7d-a7d534dd4006"
+                },
+                {
+                  "group": "right",
+                  "id": "87f049c8-7fb2-469d-b10f-b4233293926c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a5e0349c-4c1c-45b5-b45b-6eb2fa7d1f92"
+                },
+                {
+                  "group": "left",
+                  "id": "afb2200a-7ee1-44c1-852d-055820bdf917"
+                }
+              ]
+            },
+            "id": "23dc1a7f-a09c-407e-89b3-12a7b3e263c9",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Рекрутер",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "e4385893-049d-4478-a96b-3b442919c544",
+                  "title": "Подделка личности рекрутера",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Нарушитель может войти в систему под видом рекрутера и получить доступ к резюме соискателей и их переписке.  \nCWE-290: Authentication Bypass by Spoofing",
+                  "mitigation": "1. Использовать многофакторную аутентификацию.  \n2. Ограничить число попыток входа.  \nOWASP ASVS 2.1.1, 2.2.4",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "5",
+                  "score": ""
+                },
+                {
+                  "id": "dc715fe9-4aa5-41b3-892e-b843ec58f237",
+                  "title": "Утечка персональных данных кандидатов ()",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Рекрутер может случайно или намеренно передать третьим лицам данные кандидатов.  \nCWE-200: Exposure of Sensitive Information to Unauthorized Actor",
+                  "mitigation": "Вести журнал действий рекрутеров.  \nOWASP ASVS 10.2.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "6",
+                  "score": ""
+                },
+                {
+                  "id": "735c2015-93e0-4def-a903-a719da694a29",
+                  "title": "Отказ рекрутера от действий",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Рекрутер может отрицать факт взаимодействия с кандидатом/модификации данных.  \nCWE-347: Improper Verification of Cryptographic Signature",
+                  "mitigation": "Вести журнал всех действий рекрутеров.   \nOWASP ASVS 10.2.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "7",
+                  "score": ""
+                },
+                {
+                  "id": "df34e004-fede-4413-9b28-fd94a3a8454f",
+                  "title": "Доступ рекрутера к данным кандидатов, подающихся на вакансии, не относящиеся к данному рекрутеру(Information Disclosure)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Рекрутер может просматривать данные кандидатов, которые не относятся к его вакансиям, если система не ограничивает доступ по назначению.  \nCWE-200: Exposure of Sensitive Information to Unauthorized Actor",
+                  "mitigation": "Ограничить доступ рекрутера только к тем кандидатам, которые назначены на его вакансии.  OWASP ASVS 8.2.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "8",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 5,
+                "repudiation": 8
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 116.25,
+              "y": -60
+            },
+            "size": {
+              "width": 80,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Загрузка \nрезюме"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 5,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "7af8c145-a73a-42b6-be19-5795193b582d"
+                },
+                {
+                  "group": "right",
+                  "id": "7d1719f2-c341-44b4-943a-8c549883b6fe"
+                },
+                {
+                  "group": "bottom",
+                  "id": "0f13333a-7a23-4007-96b5-8f9925cd1cc3"
+                },
+                {
+                  "group": "left",
+                  "id": "4e8f4042-ef2e-43e3-b1ea-95d8720d3fc7"
+                }
+              ]
+            },
+            "id": "671782d6-b846-496b-9ba0-a7302956e785",
+            "data": {
+              "type": "tm.Process",
+              "name": "Загрузка \nрезюме",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "54683e8b-0a1a-4dac-b1b0-c4880accfb50",
+                  "title": "Перезапись чужого резюме",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Пользователь может загрузить файл с тем же именем, что и уже загруженное резюме другого кандидата, если система не контролирует имена и пути. В результате резюме может быть перезаписано. \nCWE-706: Use of Incorrectly-Resolved Name or Reference",
+                  "mitigation": " Хранить файлы в отдельных папках для каждого пользователя.  \nOWASP ASVS 14.4.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "9",
+                  "score": ""
+                },
+                {
+                  "id": "e6d8fa1e-de12-43bb-9dfb-f832baf12542",
+                  "title": "Загрузка файла в исполняемую директорию",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Если резюме загружается в папку, которую сервер может обрабатывать как исполняемую, то злоумышленник может выполнить код на сервере.  \nCWE-434: Unrestricted Upload of File with Dangerous Type",
+                  "mitigation": " Хранить загруженные файлы только в папках без права на исполнение.  \nOWASP ASVS 14.4.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "10",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 800,
+              "y": 150.00000000000108
+            },
+            "size": {
+              "width": 80,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Онлайн-\nчат"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 7,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "c009bd43-d8ed-47a1-b789-93ab294e01cd"
+                },
+                {
+                  "group": "right",
+                  "id": "853c4e2e-da18-43cf-9f08-b86e38213ac0"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f22d3963-19fc-4b45-a353-27b2dc6e9c63"
+                },
+                {
+                  "group": "left",
+                  "id": "61b9b9ff-f546-490f-8849-279341f2448f"
+                }
+              ]
+            },
+            "id": "e09accd2-0559-4d1d-8c94-72935d9d8926",
+            "data": {
+              "type": "tm.Process",
+              "name": "Онлайн-\nчат",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "cfd559a5-7698-4bf7-bc37-f1ba0aa83f9b",
+                  "title": "Изменение сообщений в чате",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Нарушитель может изменить текст сообщений в чате, если данные не проверяются на целостность.  \nCWE-345: Insufficient Verification of Data Authenticity",
+                  "mitigation": "Контролировать целостность записей при передаче и хранении.  \nOWASP ASVS 10.2.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "11",
+                  "score": ""
+                },
+                {
+                  "id": "61c5eb6e-81f7-431d-8d46-21ba3c35a150",
+                  "title": "Перегрузка чата",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Злоумышленник может отправить большое количество текста в чате, что приведёт к перегрузке интерфейса или сервера.  \nCWE-400: Uncontrolled Resource Consumption",
+                  "mitigation": "Ограничить частоту отправки сообщений.  \nOWASP ASVS 7.5.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "12",
+                  "score": ""
+                },
+                {
+                  "id": "e31ddde7-46b3-4bf5-b1a5-cb745ed3b4c7",
+                  "title": " Утечка сообщений из чата",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Сообщения, из чата кандидата и рекрутера, могут быть случайно раскрыты другим пользователям, если не используется защищённое соединение или нарушены настройки доступа.  \nCWE-200: Exposure of Sensitive Information to Unauthorized Actor",
+                  "mitigation": "1. Использовать HTTPS для всех соединений с чатом.  \n2. Ограничить доступ к сообщениям только тем, кто участвует в переписке.  \nOWASP ASVS 8.2.2, 9.1.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "13",
+                  "score": ""
+                },
+                {
+                  "id": "98231c1f-16a6-4724-ba15-88d6f15fdf3b",
+                  "title": "Вставка вредоносного кода в сообщение",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Пользователь может вставить в сообщение вредоносный JavaScript или HTML-код, который выполнится у другого пользователя при просмотре.  \nCWE-79: Improper Neutralization of Input During Web Page Generation (XSS)",
+                  "mitigation": "Экранировать содержимое сообщений перед отображением в интерфейсе.  \nOWASP ASVS 5.1.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "14",
+                  "score": ""
+                },
+                {
+                  "id": "967e9a41-5435-46e3-a2c1-57fbc1400c3c",
+                  "title": "Перегрузка чата",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Злоумышленник может отправить большое количество сообщений, что приведёт к перегрузке интерфейса или сервера.  \nCWE-400: Uncontrolled Resource Consumption",
+                  "mitigation": "Установить лимит на длину текста.  \nOWASP ASVS 13.4.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "15",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 3,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 5,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 234.99999999999955,
+              "y": 205.00000000000108
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Система\n рекрутинга"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 9,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2dcc301d-7683-4853-8251-1f17c2a7e093"
+                },
+                {
+                  "group": "right",
+                  "id": "a417dd29-9e8b-4a96-9b72-1a3ee8e48297"
+                },
+                {
+                  "group": "bottom",
+                  "id": "38651c23-bca5-4e8f-b5c2-8cdcf5236c68"
+                },
+                {
+                  "group": "left",
+                  "id": "3c4344d8-8e8e-440d-b78a-3076541edf5a"
+                }
+              ]
+            },
+            "id": "9f279ac3-8f38-4570-aea3-9b17710cc6f2",
+            "data": {
+              "type": "tm.Store",
+              "name": "Система\n рекрутинга",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "5a4dabfe-604d-4095-bc13-c27794d45ae9",
+                  "title": "Изменение информации в личном деле ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Рекрутер/злоумышленник может изменить данные кандидата в личном деле, если нет защиты от подмены.  \nCWE-494: Download of Code Without Integrity Check",
+                  "mitigation": "1. Ограничить возможность редактирования данных по ролям.  \n2. Проверять целостность информации при изменении.  \nOWASP ASVS 8.2.2, 10.2.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "16",
+                  "score": ""
+                },
+                {
+                  "id": "a98eac0e-e2ee-406b-9599-d60da18ede98",
+                  "title": "Отказ от изменений в системе",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Рекрутер может отрицать, что менял данные в личном деле кандидата, если такие действия не фиксируются.  \nCWE-347: Improper Verification of Cryptographic Signature",
+                  "mitigation": "Вести журнал всех изменений данных в системе.  \nOWASP ASVS 10.2.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "17",
+                  "score": ""
+                },
+                {
+                  "id": "464cccfe-7ab9-497a-9cf8-68eb1171f1c8",
+                  "title": "Доступ к личным делам других кандидатов (Elevation of Privilege)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Рекрутер может получить доступ к личным делам кандидатов, с которыми он не работает.  \nCWE-285: Improper Authorization",
+                  "mitigation": "1. Проверять права доступа при каждом запросе к данным кандидата.  \n2. Привязывать доступ к кандидатам к конкретной вакансии или роли рекрутера.  \n3. Не показывать данные, если пользователь не авторизован для этого запроса.  \nOWASP ASVS 4.2.1, 4.3.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "18",
+                  "score": ""
+                },
+                {
+                  "id": "87e2ae33-78ca-4198-b009-3f2631636579",
+                  "title": "Утечка данных кандидата из системы",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Если в системе нет защиты, то злоумышленник может получить доступ к заданиям кандидата, его резюме или переписке.  \nCWE-200: Exposure of Sensitive Information to Unauthorized Actor",
+                  "mitigation": "1. Проверять права доступа к каждому блоку данных кандидата.  \n2. Передавать данные только по защищённому соединению (HTTPS).  \n3. Не отображать скрытую информацию без авторизации.  \nOWASP ASVS 8.2.2, 9.1.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "19",
+                  "score": ""
+                },
+                {
+                  "id": "1bc9cfd7-99c6-4830-81ee-a20c0a048933",
+                  "title": "Хранение устаревших или лишних данных о кандидатах",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Система может хранить персональные данные кандидатов дольше, чем это необходимо, или не удалять их после отзыва согласия. Это может привести к утечке устаревшей информации.  \nCWE-212: Improper Cross-boundary Removal of Sensitive Data",
+                  "mitigation": "1. Ввести срок хранения данных и автоматическое удаление по его истечении.  \n2. Обеспечить возможность удаления данных по запросу пользователя.  \n3. Удалять или обезличивать архивные резюме и результаты заданий.  \nOWASP ASVS 1.4.4, 9.4.5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "20",
+                  "score": ""
+                },
+                {
+                  "id": "9dff3b7d-521d-4d70-a58f-2e1e4ff05db8",
+                  "title": "Переполнение системы рекрутинга",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Нарушитель может отправлять большое количество запросов на добавление кандидатов, засылать флаги, отправлять сообщения, что может повлечь за собой переполнение базы данных системы рекрутинга и замедлению её работы.  \nCWE-400: Uncontrolled Resource Consumption",
+                  "mitigation": "1. Установить лимиты на количество запросов от одного пользователя.  \n2. Ограничить число создаваемых задач за единицу времени.  \n3. Включить мониторинг нагрузки и очистку неактуальных записей.  \nOWASP ASVS 7.5.1, 13.4.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "21",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 4,
+                "denialOfService": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 850,
+              "y": 340
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Логи чатов"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 10,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2dcc301d-7683-4853-8251-1f17c2a7e093"
+                },
+                {
+                  "group": "right",
+                  "id": "a417dd29-9e8b-4a96-9b72-1a3ee8e48297"
+                },
+                {
+                  "group": "bottom",
+                  "id": "38651c23-bca5-4e8f-b5c2-8cdcf5236c68"
+                },
+                {
+                  "group": "left",
+                  "id": "3c4344d8-8e8e-440d-b78a-3076541edf5a"
+                }
+              ]
+            },
+            "id": "f7f3b4df-3f00-432f-acd4-7dfe38259895",
+            "data": {
+              "type": "tm.Store",
+              "name": "Логи чатов",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "e8d32031-4b1a-4f20-bcfc-dcc0436861ce",
+                  "title": "Логи чата сохраняются в открытом виде",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Если система сохраняет логи без шифрования или в доступной директории, злоумышленник может получить к ним доступ при компрометации сервера.  \nCWE-200: Exposure of Sensitive Information to Unauthorized Actor",
+                  "mitigation": "Хранить логи в защищённой директории и/или шифровать при записи.  \nOWASP ASVS 9.1.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "22",
+                  "score": ""
+                },
+                {
+                  "id": "48c6b8e1-965c-4f9e-861c-9b6375db91b7",
+                  "title": "Отрицание факта общения в чате",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "Пользователь может отрицать, что писал сообщение в чате, если система не фиксирует дату, время и автора при сохранении лога.  \nCWE-778: Insufficient Logging",
+                  "mitigation": "Фиксировать автора, дату и время каждого сообщения при записи в лог.  \nOWASP ASVS 10.2.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "23",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Логи сообщений чата",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Логи сообщений чата"
+            ],
+            "id": "1f1d960f-6e94-49c4-a33d-dc2461ab210d",
+            "source": {
+              "cell": "e09accd2-0559-4d1d-8c94-72935d9d8926",
+              "port": "f22d3963-19fc-4b45-a353-27b2dc6e9c63"
+            },
+            "target": {
+              "cell": "f7f3b4df-3f00-432f-acd4-7dfe38259895",
+              "port": "2dcc301d-7683-4853-8251-1f17c2a7e093"
+            },
+            "vertices": [
+              {
+                "x": 880,
+                "y": 260
+              },
+              {
+                "x": 890,
+                "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Загрузка резюме \nв систему",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Загрузка резюме \nв систему"
+            ],
+            "id": "bfcd564f-e65c-4cd6-a246-8c511388f8ca",
+            "source": {
+              "cell": "0dd262b6-e568-4a30-acd8-e9d9d606ffb8",
+              "port": "a5e0349c-4c1c-45b5-b45b-6eb2fa7d1f92"
+            },
+            "target": {
+              "cell": "671782d6-b846-496b-9ba0-a7302956e785",
+              "port": "7af8c145-a73a-42b6-be19-5795193b582d"
+            },
+            "vertices": [
+              {
+                "x": 156,
+                "y": -150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Загрузка резюме соискателей\n в личное дела",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Загрузка резюме соискателей\n в личное дела"
+            ],
+            "id": "2a69cd2a-2b49-47a8-ac75-84d714ab97c3",
+            "source": {
+              "cell": "671782d6-b846-496b-9ba0-a7302956e785",
+              "port": "0f13333a-7a23-4007-96b5-8f9925cd1cc3"
+            },
+            "target": {
+              "cell": "9f279ac3-8f38-4570-aea3-9b17710cc6f2",
+              "port": "2dcc301d-7683-4853-8251-1f17c2a7e093"
+            },
+            "vertices": [
+              {
+                "x": 210,
+                "y": 120
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Запись в личное дело \nистории онлайн-чата",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Запись в личное дело \nистории онлайн-чата"
+            ],
+            "id": "b1e3b499-6f4f-48bb-9860-e478a9b810db",
+            "source": {
+              "cell": "e09accd2-0559-4d1d-8c94-72935d9d8926",
+              "port": "61b9b9ff-f546-490f-8849-279341f2448f"
+            },
+            "target": {
+              "cell": "9f279ac3-8f38-4570-aea3-9b17710cc6f2",
+              "port": "a417dd29-9e8b-4a96-9b72-1a3ee8e48297"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Чтение/модификация списка\n актуальных вакансий",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Чтение/модификация списка\n актуальных вакансий"
+            ],
+            "id": "e93929ba-b481-4590-9577-853cf90a6b3a",
+            "source": {
+              "cell": "23dc1a7f-a09c-407e-89b3-12a7b3e263c9",
+              "port": "afb2200a-7ee1-44c1-852d-055820bdf917"
+            },
+            "target": {
+              "cell": "d6cfc14a-0171-4de1-b2cd-bd782c53291e",
+              "port": "853c4e2e-da18-43cf-9f08-b86e38213ac0"
+            },
+            "vertices": [
+              {
+                "x": 580,
+                "y": -245
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Взаимодействие в чате",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Взаимодействие в чате"
+            ],
+            "id": "e7b992be-0db0-4c21-93a6-6e94eddb6c2a",
+            "source": {
+              "cell": "23dc1a7f-a09c-407e-89b3-12a7b3e263c9",
+              "port": "a5e0349c-4c1c-45b5-b45b-6eb2fa7d1f92"
+            },
+            "target": {
+              "cell": "e09accd2-0559-4d1d-8c94-72935d9d8926",
+              "port": "c009bd43-d8ed-47a1-b789-93ab294e01cd"
+            },
+            "vertices": [
+              {
+                "x": 820,
+                "y": -40
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Получение рекрутерами \nданных о кандидатах",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Получение рекрутерами \nданных о кандидатах"
+            ],
+            "id": "4a7379c7-5e04-4cb3-9190-aa3dba88d93c",
+            "source": {
+              "cell": "23dc1a7f-a09c-407e-89b3-12a7b3e263c9",
+              "port": "a5e0349c-4c1c-45b5-b45b-6eb2fa7d1f92"
+            },
+            "target": {
+              "cell": "9f279ac3-8f38-4570-aea3-9b17710cc6f2",
+              "port": "a417dd29-9e8b-4a96-9b72-1a3ee8e48297"
+            },
+            "vertices": [
+              {
+                "x": 590,
+                "y": 10
+              },
+              {
+                "x": 550,
+                "y": 40
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Аутентификация \nпользователей в чате",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Аутентификация \nпользователей в чате"
+            ],
+            "id": "d8165d94-f410-4a2b-954f-82a46a1c12cd",
+            "source": {
+              "cell": "e09accd2-0559-4d1d-8c94-72935d9d8926",
+              "port": "853c4e2e-da18-43cf-9f08-b86e38213ac0"
+            },
+            "target": {
+              "cell": "2810784e-0633-40ab-88ab-619daf77851a",
+              "port": "c009bd43-d8ed-47a1-b789-93ab294e01cd"
+            },
+            "vertices": [
+              {
+                "x": 940,
+                "y": 170
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Просмотр актуальных \nвакансий компании",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Просмотр актуальных \nвакансий компании"
+            ],
+            "id": "884ffe17-0b12-4cc4-a0da-084069f45e12",
+            "source": {
+              "cell": "0dd262b6-e568-4a30-acd8-e9d9d606ffb8",
+              "port": "87f049c8-7fb2-469d-b10f-b4233293926c"
+            },
+            "target": {
+              "cell": "d6cfc14a-0171-4de1-b2cd-bd782c53291e",
+              "port": "61b9b9ff-f546-490f-8849-279341f2448f"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Взаимодействие в чате",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Взаимодействие в чате"
+            ],
+            "id": "d374483f-e04f-47ac-93a6-b504bfca74e2",
+            "source": {
+              "cell": "0dd262b6-e568-4a30-acd8-e9d9d606ffb8",
+              "port": "87f049c8-7fb2-469d-b10f-b4233293926c"
+            },
+            "target": {
+              "cell": "e09accd2-0559-4d1d-8c94-72935d9d8926",
+              "port": "c009bd43-d8ed-47a1-b789-93ab294e01cd"
+            },
+            "vertices": [
+              {
+                "x": 420,
+                "y": -120
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Граница взаимодействия\n с внешними пользователями\n",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Граница взаимодействия\n с внешними пользователями\n"
+            ],
+            "id": "16af4ee4-e48f-4041-8c18-fc925ee5e77e",
+            "source": {
+              "x": 70,
+              "y": -110
+            },
+            "target": {
+              "x": 360,
+              "y": -340
+            },
+            "vertices": [
+              {
+                "x": 240,
+                "y": -105
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Загрузка флагов\nв систему проверки",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Загрузка флагов\nв систему проверки"
+            ],
+            "id": "5628f3a6-860f-4cbb-a83a-a99e5e31a3f0",
+            "source": {
+              "cell": "e09accd2-0559-4d1d-8c94-72935d9d8926",
+              "port": "f22d3963-19fc-4b45-a353-27b2dc6e9c63"
+            },
+            "target": {
+              "cell": "5036e71c-d611-4f36-b29b-fd49994a0dec",
+              "port": "c1e24710-624d-4fad-be38-5441dd9bdfe7"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Данные о сданных задачах",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Данные о сданных задачах"
+            ],
+            "id": "8ec082e7-3f04-4549-9884-a8d555c44f6c",
+            "source": {
+              "cell": "5036e71c-d611-4f36-b29b-fd49994a0dec",
+              "port": "55e9fb22-0522-4c16-adae-ba2fc3a77f81"
+            },
+            "target": {
+              "cell": "9f279ac3-8f38-4570-aea3-9b17710cc6f2",
+              "port": "38651c23-bca5-4e8f-b5c2-8cdcf5236c68"
+            },
+            "vertices": [
+              {
+                "x": 303.5,
+                "y": 400
+              },
+              {
+                "x": 299.75,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 404.99999999999955,
+              "y": -340
+            },
+            "size": {
+              "width": 80,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Актуальные \nвакансии"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 11,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "c009bd43-d8ed-47a1-b789-93ab294e01cd"
+                },
+                {
+                  "group": "right",
+                  "id": "853c4e2e-da18-43cf-9f08-b86e38213ac0"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f22d3963-19fc-4b45-a353-27b2dc6e9c63"
+                },
+                {
+                  "group": "left",
+                  "id": "61b9b9ff-f546-490f-8849-279341f2448f"
+                }
+              ]
+            },
+            "id": "d6cfc14a-0171-4de1-b2cd-bd782c53291e",
+            "data": {
+              "type": "tm.Process",
+              "name": "Актуальные \nвакансии",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "c28f45e4-c1b0-48fa-bc6a-f514aa0d64c2",
+                  "title": "Удаление вакансии через подмену запроса",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Кандидат может отправить запрос на удаление вакансии, изменив метод или параметры запроса вручную, если сервер не проверяет роль пользователя.  \nCWE-863: Incorrect Authorization",
+                  "mitigation": "Ограничить права кандидатов на модификацию списка вакансий.\nOWASP ASVS 4.3.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "24",
+                  "score": ""
+                },
+                {
+                  "id": "1a266967-3e19-491a-8089-a4d788a6dbf6",
+                  "title": "Доступ к скрытым вакансиям",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Кандидат может получить доступ к вакансиям, которые ещё не опубликованы, если система не фильтрует доступ по статусу и ролям.  \nCWE-200: Exposure of Sensitive Information to Unauthorized Actor",
+                  "mitigation": "Показывать вакансии только в соответствии с уровнем доступа и статусом публикации.  \nOWASP ASVS 8.2.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "25",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 4,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1000,
+              "y": 260.0000000000011
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Auth"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 12,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "c009bd43-d8ed-47a1-b789-93ab294e01cd"
+                },
+                {
+                  "group": "right",
+                  "id": "853c4e2e-da18-43cf-9f08-b86e38213ac0"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f22d3963-19fc-4b45-a353-27b2dc6e9c63"
+                },
+                {
+                  "group": "left",
+                  "id": "61b9b9ff-f546-490f-8849-279341f2448f"
+                }
+              ]
+            },
+            "id": "2810784e-0633-40ab-88ab-619daf77851a",
+            "data": {
+              "type": "tm.Process",
+              "name": "Auth",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "1345eee7-89e6-4e54-9d7d-52d08ea73398",
+                  "title": "Доступ в чат без аутентификации",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Пользователь может попасть в чат, подделав данные или обойдя аутентификацию, и начать общение от имени другого кандидата.  \nCWE-287: Improper Authentication",
+                  "mitigation": "Привязывать сообщения в чате к проверенной сессии пользователя.  \nOWASP ASVS 3.1.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "26",
+                  "score": ""
+                },
+                {
+                  "id": "d9e6bd5a-a994-4516-9d3e-63d3fdc363ab",
+                  "title": "Вход кандидата под видом рекрутера",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Кандидат может изменить роль в запросе или использовать уязвимость в системе авторизации, чтобы войти в интерфейс как рекрутер и получить доступ к данным других пользователей.  \nCWE-269: Improper Privilege Management",
+                  "mitigation": "Назначать и проверять роль пользователя только на серверной стороне.  \nOWASP ASVS 4.2.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "27",
+                  "score": ""
+                },
+                {
+                  "id": "77cde870-0b35-4443-8a21-5d213f27d0e1",
+                  "title": "Отсутствие защиты от подбора пароля",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Злоумышленник может перебрать логин и пароль пользователя, если система не ограничивает количество попыток входа.  \nCWE-307: Improper Restriction of Excessive Authentication Attempts",
+                  "mitigation": "Добавить ограничение количества попыток входа и временную блокировку при переборе.  \nOWASP ASVS 2.2.4",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "28",
+                  "score": ""
+                },
+                {
+                  "id": "d2f10cc4-1b79-4e7c-a41d-a26a2ca42927",
+                  "title": "Подмена токена доступа",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Пользователь может подменить токен аутентификации в запросе, чтобы выдать себя за другого пользователя.  \nCWE-345: Insufficient Verification of Data Authenticity",
+                  "mitigation": "Проверять подлинность токена на сервере и использовать подпись или шифрование.  \nOWASP ASVS 3.2.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "29",
+                  "score": ""
+                },
+                {
+                  "id": "8cfa2225-de76-4e8b-94b5-313aaa39b42c",
+                  "title": "Назначение повышенных прав ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "Пользователь может изменить параметры в запросе или токене, чтобы получить более высокий уровень доступа (например, роль администратора или рекрутера).  \nCWE-250: Execution with Unnecessary Privileges",
+                  "mitigation": "Назначать и проверять права доступа только на серверной стороне, независимо от клиентских данных.  \nOWASP ASVS 4.2.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "30",
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 324.99999999999955,
+              "y": 455.0000000000011
+            },
+            "size": {
+              "width": 80,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Система \nпроверки тасков"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 14,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "55e9fb22-0522-4c16-adae-ba2fc3a77f81"
+                },
+                {
+                  "group": "right",
+                  "id": "c1e24710-624d-4fad-be38-5441dd9bdfe7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3c3494cb-0566-4944-99cf-3dcf01efa03b"
+                },
+                {
+                  "group": "left",
+                  "id": "39c1dd35-215e-4c87-afa6-13a1bce0278f"
+                }
+              ]
+            },
+            "id": "5036e71c-d611-4f36-b29b-fd49994a0dec",
+            "data": {
+              "type": "tm.Process",
+              "name": "Система \nпроверки тасков",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "0b3a21d8-c291-4c42-97dd-5009be35064e",
+                  "title": "Подмена флага при сдаче ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Кандидат может изменить данные в запросе, чтобы система засчитала таск как выполненный.  \nCWE-472: External Control of Assumed-Immutable Web Parameter",
+                  "mitigation": "1. Проверять выполнение заданий на сервере, а не по данным из клиента.  \nOWASP ASVS 4.2.1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "31",
+                  "score": ""
+                },
+                {
+                  "id": "04b85089-2812-4517-85d8-43ff5bad73f4",
+                  "title": "Просмотр чужого задания",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "Кандидат может изменить ID задания и получить доступ к чужому заданию, если система не проверяет права доступа.  \nCWE-639: Authorization Bypass Through User-Controlled Key",
+                  "mitigation": "1. Проверять, имеет ли пользователь право доступа к заданию при каждом запросе.  \n2. Использовать уникальные и непредсказуемые идентификаторы заданий.  \nOWASP ASVS 4.2.1, 4.3.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "32",
+                  "score": ""
+                },
+                {
+                  "id": "14dc2978-44b1-469e-a43a-30ba250e64ee",
+                  "title": "Сдача задания другим человеком",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Кандидат может передать ссылку на выполнение задания другому человеку, который выполнит его за него. \nCWE-290: Authentication Bypass by Spoofing",
+                  "mitigation": "Использовать верификацию личности перед сдачей (например, код, фото, видео или подтверждение профиля).  \nOWASP ASVS 3.1.2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": "33",
+                  "score": ""
+                },
+                {
+                  "id": "baba8ade-f8a9-44d1-baa2-c3e4b2ecdeec",
+                  "title": "Отказ от факта сдачи задания",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Кандидат может указать, что не сдавал задание/система его не сохранила, если действия не фиксируются в логах.\nCWE-778: Insufficient Logging",
+                  "mitigation": "1. Вести журнал событий, включая дату и время сдачи задания.  \n2. Хранить контрольные данные об отправке (ID, IP, сессию).  \nOWASP ASVS 10.2.3",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 2,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            }
+          }
+        ],
+        "description": "Recruiter"
+      }
+    ],
+    "diagramTop": 2,
+    "reviewer": "kamlovskayanadya",
+    "threatTop": 43
+  }
+}
 
